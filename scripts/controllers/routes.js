@@ -18,9 +18,9 @@ console.log('page init Index');
 page('/details/:id', (ctx) => {
   console.log('details ctx:', ctx)
   app.Book.fetchOne(ctx.params.id)
-  .then((bookdata) => {
-    console.log('bookdata', bookdata);
-    app.bookView.showOne(bookdata);
+  .then((data) => {
+    console.log('book data:', data);
+    app.bookView.showOne(data);
   });
 });
 console.log('page details');

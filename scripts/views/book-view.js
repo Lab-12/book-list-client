@@ -16,7 +16,7 @@ var app = app || {};
     $('.container').hide();
     $('.detail-view').show();
     let template = Handlebars.compile($('#one-book-template').text());
-    $('.detail-view').append(template(bookdata));
+    $('.detail-view').append(template(bookdata[0]));
   };
 
   module.bookView = bookView;
