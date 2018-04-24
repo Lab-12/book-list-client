@@ -24,14 +24,11 @@ var app = app || {};
   bookView.initNewPage = () => {
     $('.container').hide();
     $('.form-view').show();
-
-    // $('#new-book').on('change', 'input, textarea', book.insert);
     $('#new-book').on('submit', bookView.submit);
   };
 
   bookView.submit = event => {
     event.preventDefault();
-    console.lgo
     $('#book-list').empty();
     let book = new module.Book({
       title: $('#title').val(),
@@ -42,14 +39,6 @@ var app = app || {};
     });
     app.Book.insert(book);
   }
-
-  // bookView.submit = () => {
-
-  // }
-
-
-
-
   module.bookView = bookView;
 })(app);
 
