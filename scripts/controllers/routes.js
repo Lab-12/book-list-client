@@ -1,5 +1,10 @@
 'use strict';
 
+// tweak to run on GH Pages
+// if (window.location.protocol.startsWith('https:')) {
+//   page.base('/internets-of-thing');
+// }
+
 // all route changes should hide page containers
 page('/*', (ctx, next) => {
   $('.page').hide()
@@ -12,9 +17,9 @@ console.log('page init Index');
 
 // /books/new - Form View that will allow the user to enter a new record into the DB
 // Your form should take the following inputs: title, author, isbn, image_url, and description
-// page('/new', app.formView.initIndexPage);
-// console.log('page form view');
-// /books/:book_id - Detail View of one complete book record
+page('/new', app.bookView.initNewPage);
+console.log('page form view');
+
 page('/details/:id', (ctx) => {
   console.log('details ctx:', ctx)
   app.Book.fetchOne(ctx.params.id)
