@@ -36,3 +36,45 @@
 .icon-linkedin2:before {
   content: "\eaca";
 }
+
+
+
+.icon-home:before {
+	content: "\e908";
+}
+.icon-home3:before {
+	content: "\e900";
+}
+.icon-address-book:before {
+	content: "\e901";
+}
+.icon-rocket:before {
+	content: "\e909";
+}
+.icon-power:before {
+	content: "\e90a";
+}
+.icon-menu:before {
+	content: "\e902";
+}
+.icon-link:before {
+	content: "\e903";
+}
+.icon-happy:before {
+	content: "\e904";
+}
+.icon-happy2:before {
+	content: "\e905";
+}
+.icon-plus:before {
+	content: "\e90b";
+}
+.icon-minus:before {
+	content: "\e90c";
+}
+.icon-cross:before {
+	content: "\e90d";
+}
+.icon-checkmark:before {
+	content: "\e90e";
+}
