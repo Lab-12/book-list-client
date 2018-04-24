@@ -6,6 +6,7 @@ var app = app || {};
   const bookView = {};
 
   bookView.initIndexPage = function() {
+    $('#book-list').empty();
     $('.container').hide();
     $('.book-view').show();
     module.Book.all.map(book => $('#book-list').append(book.toHtml()));
@@ -13,6 +14,7 @@ var app = app || {};
 
   bookView.showOne = (bookdata) => {
     console.log('book data:', bookdata);
+    $('.detail-view').empty();
     $('.container').hide();
     $('.detail-view').show();
     let template = Handlebars.compile($('#one-book-template').text());
