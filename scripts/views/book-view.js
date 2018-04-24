@@ -19,6 +19,35 @@ var app = app || {};
     $('.detail-view').append(template(bookdata[0]));
   };
 
+  bookView.initNewPage = () => {
+    $('.container').hide();
+    $('.form-view').show();
+
+    // $('#new-book').on('change', 'input, textarea', book.insert);
+    $('#new-book').on('submit', bookView.submit);
+  };
+
+  bookView.submit = event => {
+    event.preventDefault();
+    console.lgo
+    $('#book-list').empty();
+    let book = new module.Book({
+      title: $('#title').val(),
+      author: $('#author').val(),
+      isbn: $('#isbn').val(),
+      image_url: $('#image_url').val(),
+      description: $('#description').val()
+    });
+    app.Book.insert(book);
+  }
+
+  // bookView.submit = () => {
+
+  // }
+
+
+
+
   module.bookView = bookView;
 })(app);
 
