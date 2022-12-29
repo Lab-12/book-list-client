@@ -15,7 +15,7 @@
   "author": "Scott Schmidt, et al.",
   "license": "Copyright Code Fellows 2018",
   "dependencies": {
-    "babel-minify": "^0.2.0",
+    "babel-minify": "^0.5.2",
     "clean-css-cli": "^4.1.10",
     "html-minifier": "^3.5.7"
   }
